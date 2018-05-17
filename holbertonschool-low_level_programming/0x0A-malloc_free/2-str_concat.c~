@@ -1,0 +1,58 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ *
+ *
+ *
+ *
+ */
+
+int _strlen(char *s)
+{
+	int length;
+
+	if (s == NULL)
+		length = 0;
+	length = 0;
+	while (*s != '\0')
+	{
+		s++;
+		length++;
+	}
+	return (length);
+}
+
+/**
+ *
+ *
+ *
+ *
+ */
+
+char *str_concat(char *s1, char *s2)
+{
+	char *ptr;
+	int hold;
+	char *container;
+
+	hold = _strlen(s1) + _strlen(s2);
+	ptr = malloc(sizeof(char) * hold);
+	container = ptr;
+	if (ptr == NULL)
+		return (NULL);
+	while (*s1 != '\0')
+	{
+		*ptr = *s1;
+		s1++;
+		ptr++;
+	}
+	while (*s2 != '\0')
+	{
+		*ptr = *s2;
+		s2++;
+		ptr++;
+	}
+	*ptr = '\0';
+	return (container);
+}
