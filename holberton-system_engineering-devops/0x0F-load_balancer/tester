@@ -1,0 +1,5 @@
+frontend http_front
+	bind *:80
+	stats uri /haproxy?stats
+	default_backend http_back
+
