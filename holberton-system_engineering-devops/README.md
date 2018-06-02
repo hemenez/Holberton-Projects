@@ -1,2 +1,2 @@
 # holberton-system_engineering-devops
-This project is about learning the shell basics, specifically commands. 
+This project follows concepts such as server configuration, web-stack debugging, APIs, networking, scripting, and more.
